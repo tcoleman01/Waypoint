@@ -4,7 +4,6 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import statesData from "../../data/states.json";
 import statesGeoJSON from "../../data/gz_2010_us_040_00_5m.json";
 
-//mapboxgl.accessToken = "pk.eyJ1Ijoic2FsbWVpZGExOTkzIiwiYSI6ImNtaGxmcDc1bTAwNnAycHE0MHBzMjQyeW4ifQ.CyQk_2C7_6cSQjidPsgjEA";
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
 // Create a mapping from state abbreviation to full state name
