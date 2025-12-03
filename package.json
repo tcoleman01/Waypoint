@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/nodemon/bin/nodemon.js backend.js",
-    "build": "cd client && npm install && npm run build",
+    "start": "node backend.js",
+    "build": "cd client && npm install && npm run build && cp -r dist ../dist",
     "format": "prettier --write ",
     "lint": "eslint ."
   },
