@@ -11,6 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(express.static(path.join(process.cwd(), "dist")));
+app.get("/*splat", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "dist", "index.html"));
+});
+
 app.use("/auth", authRouter);
 app.use("/users", authRouter);
 
