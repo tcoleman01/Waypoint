@@ -4,6 +4,7 @@ dotenv.config();
 import express from "express";
 import tripsRouter from "./routes/trips.js";
 import authRouter from "./routes/auth.js";
+import path from "path";
 
 const PORT = process.env.PORT || 3000;
 
