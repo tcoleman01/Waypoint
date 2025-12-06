@@ -130,11 +130,6 @@ ul {
   padding-left: 18px;
 }
 
-.accordion-card {
-  background: rgb(6, 154, 199);
-  color: black;
-  text-align: center;
-}
 .state-hero {
   width: 100%;
   height: auto;
@@ -269,9 +264,11 @@ ul {
   color: var(--text);
 }
 .accordion-body {
-  background-color: #303647;
+  background-color: #242a38;
   color: var(--text);
 }
+
+
 
 .accordion-inner-cards {
   background-color: var(--card);
@@ -300,9 +297,27 @@ ul {
 /* =========================
    Navbar Customization
 ========================= */
-.navbar {
-  background-color: var(--card);
+.navbar-theme {
+  background-color: var(--bg);
   padding: 1rem 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.navbar-brand,
+.navbar-brand:focus,
+.navbar-brand:active {
+  font-weight: bold;
   color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: var(--accent);
+}
+
+.nav-links .nav-link {
+  color: var(--text);
+  margin-right: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
 }

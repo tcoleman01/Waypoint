@@ -10,29 +10,15 @@ import StateIndex from "./pages/StateIndex.jsx";
 import StateDetail from "./pages/StateDetail.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import { useAuth } from "./context/AuthContext.jsx";
-import Visited from "./pages/Visited.jsx";
 import Trip from "./pages/Trip.jsx";
+import NavigationBar from "./components/NavigationBar.jsx";
 
 export default function App() {
   const { user, logout } = useAuth();
 
   return (
     <>
-      <header className="site-header">
-        <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/states">States</Link>
-          {user && <Link to="/mytrips">My Trips</Link>}
-          {!user && <Link to="/login">Login</Link>}
-          {!user && <Link to="/register">Register</Link>}
-          {user && <Link to="/account">Account</Link>}
-          {user && (
-            <button onClick={logout} className="linklike">
-              Logout
-            </button>
-          )}
-        </nav>
-      </header>
+      <NavigationBar user={user} logout={logout} />
 
       <main className="container">
         <Routes>

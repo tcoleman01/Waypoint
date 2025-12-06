@@ -17,8 +17,7 @@ export default function Home() {
           <Link className="btn btn-lg primary" to="/states">Browse States</Link>
           {user ? (
             <>
-              <Link className="btn btn-lg" to="/visited">My Visited</Link>
-              <Link className="btn btn-lg" to="/trip">Plan a Trip</Link>
+              <Link className="btn btn-lg" to="/trip">Track your trips</Link>
             </>
           ) : (
             <>
@@ -31,19 +30,14 @@ export default function Home() {
 
       <div className="home-features">
         <div className="feature-card">
-          <h3>Interactive Map</h3>
-          <p>Click any state to see highlights and add it to your travel history.</p>
+          <h3>Auto-update Map</h3>
+          <p>Visibly keep track of where you've been on an interactive map.</p>
         </div>
         <div className="feature-card">
           <h3>Trip Tracker</h3>
-          <p>Plan multi-city routes, dates, budgets, and notes—keep it all organized.</p>
+          <p>Track multi-city routes, dates, budgets, and notes—keep it all organized.</p>
         </div>
 
-      </div>
-
-      <div className="home-tip">
-        <span className="tip-badge">Tip</span>
-        <p>Already traveling? Head to <Link to="/trip">Trips</Link> to add stops and track expenses.</p>
       </div>
     </section>
   );
